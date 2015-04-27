@@ -1,0 +1,21 @@
+﻿@{ ViewBag.Title = "Home"; }
+@model MvcApplication.Models.ViewModels.HomeViewModel
+@section MainContent
+{
+	<p>Text from the start-page.</p>
+
+	@Html.Label5("FirstName")
+	@Html.TextBox5("FirstName", "Test-value")
+
+	@Html.Label5For(model => model.SubForm.Message)
+	@Html.TextBox5For(model => model.SubForm.Message)
+
+	<hr />
+
+	@Html.Label5("FirstName")
+	@Html.TextBox("FirstName", null, new {id = "MyIdSetByMe"})
+
+	@Html.Label5For(model => model.SubForm.Message)
+	@Html.TextBox("Message", null, Html.TextInputAttributes("FirstName", new {id = "MyFirstExactId"}))
+	@Html.TextBox("Message2", null, Html.TextInputAttributesFor(model => model.FirstName, new {id = "MySecondExactId"}))
+}

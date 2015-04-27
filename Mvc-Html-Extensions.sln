@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{C0AA948B-C2CE-4868-8072-E229A1DF58A1}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{1C26B594-B0E1-4D10-B6E5-E34C02B13DB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B8862C4E-9855-4FE6-A1FF-0F4E134643E9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.config = .nuget\NuGet.config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company", "Company\Company.csproj", "{9970DC8E-0397-4C0F-B1E6-55564668BD4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{E4AD465A-40B0-4A9E-8592-30F4633D4D9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysis", "{E4FB7781-E038-49E9-A111-16210C14CFB3}"
+	ProjectSection(SolutionItems) = preProject
+		CodeAnalysis\Solution.ruleset = CodeAnalysis\Solution.ruleset
+		CodeAnalysis\Solution.Tests.ruleset = CodeAnalysis\Solution.Tests.ruleset
+		CodeAnalysis\SolutionDictionary.xml = CodeAnalysis\SolutionDictionary.xml
+		CodeAnalysis\SolutionSuppressions.cs = CodeAnalysis\SolutionSuppressions.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{B1D4F674-F07C-4CDB-B3DF-EF79D139443D}"
+	ProjectSection(SolutionItems) = preProject
+		Properties\Solution-AssemblyInfo.cs = Properties\Solution-AssemblyInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C26B594-B0E1-4D10-B6E5-E34C02B13DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C26B594-B0E1-4D10-B6E5-E34C02B13DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C26B594-B0E1-4D10-B6E5-E34C02B13DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C26B594-B0E1-4D10-B6E5-E34C02B13DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9970DC8E-0397-4C0F-B1E6-55564668BD4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9970DC8E-0397-4C0F-B1E6-55564668BD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9970DC8E-0397-4C0F-B1E6-55564668BD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9970DC8E-0397-4C0F-B1E6-55564668BD4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AD465A-40B0-4A9E-8592-30F4633D4D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AD465A-40B0-4A9E-8592-30F4633D4D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AD465A-40B0-4A9E-8592-30F4633D4D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AD465A-40B0-4A9E-8592-30F4633D4D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
