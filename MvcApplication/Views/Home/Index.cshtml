@@ -4,6 +4,58 @@
 {
 	<p>Text from the start-page.</p>
 
+	<h2>Test-form</h2>
+	@using(Html.BeginForm())
+	{
+		<fieldset>
+			<legend>Test-form</legend>
+			<div>
+				@Html.Label5For(model => model.SubForm.Message)
+				@Html.TextBox5For(model => model.SubForm.Message)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.ReadOnlyValue)
+				@Html.TextBox5For(model => model.SubForm.ReadOnlyValue)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.RequiredValue)
+				@Html.TextBox5For(model => model.SubForm.RequiredValue)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.Sender)
+				@Html.TextBox5For(model => model.SubForm.Sender)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.ValueAsNumberInput)
+				@Html.TextBox5For(model => model.SubForm.ValueAsNumberInput)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.Number)
+				@Html.TextBox5For(model => model.SubForm.Number)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.Email)
+				@Html.TextBox5For(model => model.SubForm.Email)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.Url)
+				@Html.TextBox5For(model => model.SubForm.Url)
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</fieldset>
+	}
+
+	@*
+	<h2>EditorFor</h2>
+	@using (Html.BeginForm())
+	{
+		@Html.EditorFor(model => model.SubForm)
+	}
+
+	<hr />
+
 	@Html.Label5("FirstName")
 	@Html.TextBox5("FirstName", "Test-value")
 
@@ -18,4 +70,5 @@
 	@Html.Label5For(model => model.SubForm.Message)
 	@Html.TextBox("Message", null, Html.TextInputAttributes("FirstName", new {id = "MyFirstExactId"}))
 	@Html.TextBox("Message2", null, Html.TextInputAttributesFor(model => model.FirstName, new {id = "MySecondExactId"}))
+	*@
 }

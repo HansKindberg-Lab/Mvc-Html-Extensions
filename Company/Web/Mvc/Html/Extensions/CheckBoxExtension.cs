@@ -52,47 +52,47 @@ namespace Company.Web.Mvc.Html.Extensions
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name)
 		{
-			return htmlHelper.CheckBox(name, TagHelper.BuildAttributes(name, htmlHelper));
+			return htmlHelper.CheckBox(name, TagHelper.BuildInputAttributes(name, htmlHelper));
 		}
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name, bool isChecked)
 		{
-			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildAttributes(name, htmlHelper));
+			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper));
 		}
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name, object htmlAttributes)
 		{
-			return htmlHelper.CheckBox(name, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBox(name, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.CheckBox(name, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBox(name, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name, bool isChecked, object htmlAttributes)
 		{
-			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString CheckBox5(this HtmlHelper htmlHelper, string name, bool isChecked, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBox(name, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString CheckBox5For<TModel>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, bool>> expression)
 		{
-			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildAttributes(expression, htmlHelper));
+			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildInputAttributes(expression, htmlHelper));
 		}
 
 		public static IHtmlString CheckBox5For<TModel>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, bool>> expression, object htmlAttributes)
 		{
-			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildAttributes(expression, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString CheckBox5For<TModel>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, bool>> expression, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildAttributes(expression, htmlHelper, htmlAttributes));
+			return htmlHelper.CheckBoxFor(expression, TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes));
 		}
 
 		#endregion

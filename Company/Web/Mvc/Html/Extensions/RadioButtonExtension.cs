@@ -52,47 +52,47 @@ namespace Company.Web.Mvc.Html.Extensions
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value)
 		{
-			return htmlHelper.RadioButton(name, value, TagHelper.BuildAttributes(name, htmlHelper));
+			return htmlHelper.RadioButton(name, value, TagHelper.BuildInputAttributes(name, htmlHelper));
 		}
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value, bool isChecked)
 		{
-			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildAttributes(name, htmlHelper));
+			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper));
 		}
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value, object htmlAttributes)
 		{
-			return htmlHelper.RadioButton(name, value, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButton(name, value, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.RadioButton(name, value, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButton(name, value, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value, bool isChecked, object htmlAttributes)
 		{
-			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString RadioButton5(this HtmlHelper htmlHelper, string name, object value, bool isChecked, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildAttributes(name, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButton(name, value, isChecked, TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString RadioButton5For<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, object value)
 		{
-			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildAttributes(expression, htmlHelper));
+			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildInputAttributes(expression, htmlHelper));
 		}
 
 		public static IHtmlString RadioButton5For<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, object value, object htmlAttributes)
 		{
-			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildAttributes(expression, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes));
 		}
 
 		public static IHtmlString RadioButton5For<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, object value, IDictionary<string, object> htmlAttributes)
 		{
-			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildAttributes(expression, htmlHelper, htmlAttributes));
+			return htmlHelper.RadioButtonFor(expression, value, TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes));
 		}
 
 		#endregion

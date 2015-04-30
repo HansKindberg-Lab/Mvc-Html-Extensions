@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Web;
 using System.Web.Mvc;
 using Company.InversionOfControl;
 
@@ -78,6 +79,66 @@ namespace Company.Web.Mvc.Html.Extensions
 			return TagHelper.BuildAttributes(expression, htmlHelper, htmlAttributes);
 		}
 
+		public static IDictionary<string, object> InputAttributes(this HtmlHelper htmlHelper, string name)
+		{
+			return TagHelper.BuildInputAttributes(name, htmlHelper);
+		}
+
+		public static IDictionary<string, object> InputAttributes(this HtmlHelper htmlHelper, string name, object htmlAttributes)
+		{
+			return TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> InputAttributes(this HtmlHelper htmlHelper, string name, IDictionary<string, object> htmlAttributes)
+		{
+			return TagHelper.BuildInputAttributes(name, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> InputAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression)
+		{
+			return TagHelper.BuildInputAttributes(expression, htmlHelper);
+		}
+
+		public static IDictionary<string, object> InputAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, object htmlAttributes)
+		{
+			return TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> InputAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, IDictionary<string, object> htmlAttributes)
+		{
+			return TagHelper.BuildInputAttributes(expression, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributes(this HtmlHelper htmlHelper, string name)
+		{
+			return TagHelper.BuildTextAreaAttributes(name, htmlHelper);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributes(this HtmlHelper htmlHelper, string name, object htmlAttributes)
+		{
+			return TagHelper.BuildTextAreaAttributes(name, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributes(this HtmlHelper htmlHelper, string name, IDictionary<string, object> htmlAttributes)
+		{
+			return TagHelper.BuildTextAreaAttributes(name, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression)
+		{
+			return TagHelper.BuildTextAreaAttributes(expression, htmlHelper);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, object htmlAttributes)
+		{
+			return TagHelper.BuildTextAreaAttributes(expression, htmlHelper, htmlAttributes);
+		}
+
+		public static IDictionary<string, object> TextAreaAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, IDictionary<string, object> htmlAttributes)
+		{
+			return TagHelper.BuildTextAreaAttributes(expression, htmlHelper, htmlAttributes);
+		}
+
 		public static IDictionary<string, object> TextInputAttributes(this HtmlHelper htmlHelper, string name)
 		{
 			return TagHelper.BuildTextInputAttributes(name, htmlHelper);
@@ -106,6 +167,16 @@ namespace Company.Web.Mvc.Html.Extensions
 		public static IDictionary<string, object> TextInputAttributesFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, IDictionary<string, object> htmlAttributes)
 		{
 			return TagHelper.BuildTextInputAttributes(expression, htmlHelper, htmlAttributes);
+		}
+
+		public static IHtmlString ToHtml(this IDictionary<string, object> attributes)
+		{
+			return TagHelper.AttributesToHtml(attributes);
+		}
+
+		public static IHtmlString ToHtml(this IDictionary<string, object> attributes, bool leadingSpace, bool trailingSpace)
+		{
+			return TagHelper.AttributesToHtml(attributes, leadingSpace, trailingSpace);
 		}
 
 		#endregion
