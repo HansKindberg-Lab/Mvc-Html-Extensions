@@ -7,6 +7,7 @@
 	<h2>Test-form</h2>
 	@using(Html.BeginForm())
 	{
+		@Html.ValidationSummary("Invalid input", null, "h2")
 		<fieldset>
 			<legend>Test-form</legend>
 			<div>
@@ -20,6 +21,10 @@
 			<div>
 				@Html.Label5For(model => model.SubForm.RequiredValue)
 				@Html.TextBox5For(model => model.SubForm.RequiredValue)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.Pattern)
+				@Html.TextBox5For(model => model.SubForm.Pattern)
 			</div>
 			<div>
 				@Html.Label5For(model => model.SubForm.Sender)
@@ -46,6 +51,9 @@
 			</div>
 		</fieldset>
 	}
+
+	<h2>Attributes - test</h2>
+	<input @Html.TextInputAttributesFor(model => model.SubForm.Pattern).ToHtml(false, true)/>
 
 	@*
 	<h2>EditorFor</h2>

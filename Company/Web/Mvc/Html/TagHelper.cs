@@ -537,14 +537,13 @@ namespace Company.Web.Mvc.Html
 
 		protected internal virtual bool IsTextAreaClientValidationRule(ModelClientValidationRule clientValidationRule)
 		{
-			var maxLengthRule = clientValidationRule as ModelClientValidationMaxLengthRule;
-
-			if(maxLengthRule != null)
+			if(clientValidationRule is ModelClientValidationMaxLengthRule)
 				return true;
 
-			var stringLengthRule = clientValidationRule as ModelClientValidationStringLengthRule;
+			if(clientValidationRule is ModelClientValidationRegexRule)
+				return true;
 
-			if(stringLengthRule != null)
+			if(clientValidationRule is ModelClientValidationStringLengthRule)
 				return true;
 
 			return false;
@@ -552,9 +551,7 @@ namespace Company.Web.Mvc.Html
 
 		protected internal virtual bool IsTextInputClientValidationRule(ModelClientValidationRule clientValidationRule)
 		{
-			var rangeRule = clientValidationRule as ModelClientValidationRangeRule;
-
-			if(rangeRule != null)
+			if(clientValidationRule is ModelClientValidationRangeRule)
 				return true;
 
 			return this.IsTextAreaClientValidationRule(clientValidationRule);

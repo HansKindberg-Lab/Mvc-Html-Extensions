@@ -13,16 +13,29 @@ namespace MvcApplication.Controllers
 			return this.View(new HomeViewModel());
 		}
 
-		[HttpPost]
-		public virtual ActionResult Index(HomeViewModel model)
-		{
-			return this.View(model);
-		}
+		//[HttpPost]
+		//public virtual ActionResult Index(HomeViewModel homeViewModel)
+		//{
+		//	var model = new HomeViewModel();
 
+		//	if(this.ModelState.IsValid)
+		//		this.ModelState.Clear();
+		//	else
+		//		model = homeViewModel;
+
+		//	return this.View(model);
+		//}
 		[HttpPost]
-		public virtual ActionResult Index(TestForm model)
+		public virtual ActionResult Index(TestForm subForm)
 		{
-			return this.View(new HomeViewModel {SubForm = model});
+			var model = new HomeViewModel();
+
+			if(this.ModelState.IsValid)
+				this.ModelState.Clear();
+			else
+				model.SubForm = subForm;
+
+			return this.View(model);
 		}
 
 		#endregion
