@@ -516,8 +516,14 @@ namespace Company.Web.Mvc.Html
 
 			string htmlInputType;
 
-			if(metadata.DataTypeName != null && this.DataTypeToHtmlTextInputTypeMappings.TryGetValue(metadata.DataTypeName, out htmlInputType))
-				return htmlInputType;
+			if(metadata.DataTypeName != null)
+			{
+				if(this.DataTypeToHtmlTextInputTypeMappings.TryGetValue(metadata.DataTypeName, out htmlInputType))
+					return htmlInputType;
+
+				if(!string.IsNullOrEmpty(metadata.DataTypeName))
+					return metadata.DataTypeName;
+			}
 
 			if(this.TypeToHtmlTextInputTypeMappings.TryGetValue(metadata.ModelType, out htmlInputType))
 				return htmlInputType;
