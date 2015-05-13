@@ -91,6 +91,8 @@
     <Compile Include="Web\Mvc\Html\Extensions\CheckBoxExtension.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Web\Mvc\Html\Extensions\ListBoxExtension.cs" />
+    <Compile Include="Web\Mvc\Html\Extensions\DropDownListExtension.cs" />
     <Compile Include="Web\Mvc\Html\Extensions\LabelExtension.cs" />
     <Compile Include="Web\Mvc\Html\Extensions\PasswordExtension.cs">
       <SubType>Code</SubType>
