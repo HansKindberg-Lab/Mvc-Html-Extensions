@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using MvcApplication.Business.Enumerations;
 
 namespace MvcApplication.Models.Forms
 {
@@ -11,6 +12,9 @@ namespace MvcApplication.Models.Forms
 		[Display(Description = "Email - Description", GroupName = "Email - GroupName", Name = "Email - Name", Order = 10, Prompt = "Email - Prompt", ShortName = "Email - ShortName")]
 		[EmailAddress]
 		public virtual string Email { get; set; }
+
+		[Display(Description = "LocalizedEnumerationValue - Description", GroupName = "LocalizedEnumerationValue - GroupName", Name = "LocalizedEnumerationValue - Name", Order = 10, Prompt = "LocalizedEnumerationValue - Prompt", ShortName = "LocalizedEnumerationValue - ShortName")]
+		public virtual LocalizedEnumeration? LocalizedEnumerationValue { get; set; }
 
 		[Display(Description = "Message - Description", GroupName = "Message - GroupName", Name = "Message - Name", Order = 20, Prompt = "Message - Prompt", ShortName = "Message - ShortName")]
 		public virtual string Message { get; set; }
@@ -33,6 +37,9 @@ namespace MvcApplication.Models.Forms
 
 		[Display(Description = "Sender - Description", GroupName = "Sender - GroupName", Name = "Sender - Name", Order = 10, Prompt = "Sender - Prompt", ShortName = "Sender - ShortName")]
 		public virtual string Sender { get; set; }
+
+		[Display(Description = "UnlocalizedEnumerationValue - Description", GroupName = "UnlocalizedEnumerationValue - GroupName", Name = "UnlocalizedEnumerationValue - Name", Order = 10, Prompt = "UnlocalizedEnumerationValue - Prompt", ShortName = "UnlocalizedEnumerationValue - ShortName")]
+		public virtual UnlocalizedEnumeration UnlocalizedEnumerationValue { get; set; }
 
 		[Display(Description = "Url - Description", GroupName = "Url - GroupName", Name = "Url - Name", Order = 10, Prompt = "Url - Prompt", ShortName = "Url - ShortName")]
 		public virtual Uri Url { get; set; }

@@ -47,6 +47,14 @@
 				@Html.TextBox5For(model => model.SubForm.Url)
 			</div>
 			<div>
+				@Html.Label5For(model => model.SubForm.LocalizedEnumerationValue)
+				@Html.EnumDropDownList5For(model => model.SubForm.LocalizedEnumerationValue)
+			</div>
+			<div>
+				@Html.Label5For(model => model.SubForm.UnlocalizedEnumerationValue)
+				@Html.EnumDropDownList5For(model => model.SubForm.UnlocalizedEnumerationValue)
+			</div>
+			<div>
 				<button type="submit">Submit</button>
 			</div>
 		</fieldset>
